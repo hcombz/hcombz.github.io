@@ -1,0 +1,63 @@
+{% if post.header.teaser %}
+  {% capture teaser %}{{ post.header.teaser }}{% endcapture %}
+{% else %}
+  {% assign teaser = site.teaser %}
+{% endif %}
+
+{% if post.id %}
+  {% assign title = post.title | markdownify | remove: "<p>" | remove: "</p>" %}
+{% else %}
+  {% assign title = post.title %}
+{% endif %}
+<style>
+* {
+  box-sizing: border-box;
+}
+
+.row {
+  display: flex;
+}
+
+/* Create three equal columns that sits next to each other */
+.image_column {
+  flex: 33.33%;
+  padding: 5px;
+}
+
+.text_column {
+  flex: 66.66%;
+  padding: 5px;
+}
+
+</style>
+<div class="{{ include.type | default: 'list' }}__item">
+
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+        {{ title }} <br />
+
+        <p class="small" style="text-align: center; color: grey; font-size:65%">{{post.authors}}</p>
+        <p class="small" style="text-align: center; color: red; font-size:70%"><strong>{{post.conf}}</strong></p>
+        <p class="small" style="text-align: center; font_size=30%">
+            {% if post.blog_link %}
+             <a href="{{ post.blog_link }}" title="Blog" style="color: blue">Blog </a> {% endif %}
+            {% if post.arxiv_link %}
+             &nbsp;
+             <a href="{{ post.arxiv_link }}" title="Arxiv" style="color: blue">Arxiv </a> {% endif %}
+            {% if post.pdf_link %}
+             &nbsp;
+             <a href="{{ post.pdf_link }}" title="Pdf" style="color: blue">Pdf </a> {% endif %}
+        </p>
+
+
+    </h2>
+
+</div>
+<div class="row">
+  <div class="image_column">
+    <img src={{post.image}} alt="DOPE" style="width:100%">
+  </div>
+  <div class="text_column">
+    <p class="small" style="text-align: center; color: grey; font-size:65%">{{post.abstract}}</p>
+  </div>
+
+</div>
