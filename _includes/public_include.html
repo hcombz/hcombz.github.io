@@ -32,21 +32,21 @@
 </style>
 <div class="{{ include.type | default: 'list' }}__item">
 
-    <h2 class="archive__item-title no_toc" itemprop="headline">
+    <h2 class="body" itemprop="headline">
         {{ title }} <br />
 
         <p class="small" style="text-align: center; color: grey; font-size:65%">{{post.authors}}</p>
         <p class="small" style="text-align: center; color: red; font-size:70%"><strong>{{post.conf}}</strong></p>
         <p class="small" style="text-align: center; font_size=30%">
             {% if post.blog_link %}
-             <a href="{{ post.blog_link }}" title="Blog" style="color: blue">Blog </a> {% endif %}
+             <a href={{ post.blog_link }} style="color: blue">Blog </a> {% endif %}
             {% if post.arxiv_link %}
              &nbsp;
-             <a href="{{ post.arxiv_link }}" title="Arxiv" style="color: blue">Arxiv </a> {% endif %}
+             <a href={{ post.arxiv_link }} style="color: blue">Arxiv </a> {% endif %}
             {% if post.pdf_link %}
              &nbsp;
-             <a href="{{ post.pdf_link }}" title="Pdf" style="color: blue">Pdf </a> {% endif %}
-        </p>
+             <a href={{ post.pdf_link }} style="color:blue">Pdf </a> {% endif %}
+
 
 
     </h2>
