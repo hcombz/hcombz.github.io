@@ -4,7 +4,8 @@ title:  "SMPLy benchmarking 3D human pose estimation in the wild"
 authors: "Vincent Leroy  &nbsp; Philippe Weinzaepfel &nbsp; Romain Brégier &nbsp; Hadrien Combaluzier &nbsp; Gregory Rogez"
 conf: "3DV2020"
 blog_link: https://europe.naverlabs.com/research/publications/smply-benchmarking-3d-human-pose-estimation-in-the-wild/
-arxiv_link:
+arxiv_link: https://arxiv.org/abs/2012.02743
+pdf_link: https://arxiv.org/pdf/2012.02743.pdf
 image: "assets/images/mannequin.png"
 abstract: "Despite the apparent advances in Pose + Shape prediction from single images, qualitative benchmarks are still missing.
      We present a pipeline to easily produce and validate a dataset of in the wild images that will allow such a benchmark.
